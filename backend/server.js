@@ -16,7 +16,7 @@ const userRoute = require("./routes/userRoute");
 app.use(express.json());
 
 mongoose
-    .connect(process.env.URI)
+    .connect(process.env.MONGO_URI)
     .then(() => {
         console.log("Connected to MongoDB");
         app.listen(process.env.PORT || 8000 , (err)=>{
